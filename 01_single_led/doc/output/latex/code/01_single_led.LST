@@ -1,0 +1,39 @@
+A51 MACRO ASSEMBLER  01_SINGLE_LED                                                        04/17/2026 01:21:37 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN 01_single_led.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.exe E:\homework\51_proteus\01_single_led\01_single_led.A51 DEBUG SYMBOLS OBJEC
+                      T(01_single_led.OBJ) 
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 020030            2     LJMP MAIN
+                       3     
+0030                   4     ORG 0030H
+0030                   5     MAIN:
+0030                   6     LOOP:
+0030 7580FF            7         MOV P0, #0FFH
+0033 E580              8         MOV A, P0
+0035 F590              9         MOV P1, A
+0037 80F7             10         SJMP LOOP
+                      11     END
+A51 MACRO ASSEMBLER  01_SINGLE_LED                                                        04/17/2026 01:21:37 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP . . . . . . .  C ADDR   0030H   A   
+MAIN . . . . . . .  C ADDR   0030H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
