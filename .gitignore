@@ -1,0 +1,27 @@
+# Proteus auto backup directories
+**/Project Backups/
+
+# Office temporary lock files
+**/~$*
+
+# LaTeX intermediate build directory
+**/doc/output/latex/build/
+
+# LaTeX intermediate files
+**/*.aux
+**/*.log
+**/*.out
+**/*.toc
+**/*.fls
+**/*.fdb_latexmk
+**/*.synctex.gz
+**/*.xdv
+**/*.lof
+**/*.lot
+**/*.bbl
+**/*.blg
+**/*.nav
+**/*.snm
+**/*.vrb
+**/*.run.xml
+**/*.tmp
