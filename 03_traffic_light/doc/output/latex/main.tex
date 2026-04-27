@@ -1,0 +1,128 @@
+\documentclass[12pt,a4paper]{ctexart}
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.4cm,right=2.4cm]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black,
+  pdftitle={实验三 交通灯控制实验报告},
+  pdfauthor={自动化学院}
+}
+
+\definecolor{themecolor}{RGB}{18,77,125}
+\definecolor{accentred}{RGB}{178,34,34}
+\definecolor{accentgreen}{RGB}{28,128,70}
+\definecolor{accentyellow}{RGB}{180,128,0}
+\definecolor{softline}{RGB}{220,228,236}
+\definecolor{codebg}{RGB}{246,248,250}
+\definecolor{codekw}{RGB}{0,92,175}
+\definecolor{codecmt}{RGB}{24,120,58}
+
+\titleformat{\section}{\Large\bfseries\color{themecolor}}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\large\bfseries\color{themecolor}}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.2em}{0.7em}
+\titlespacing*{\subsection}{0pt}{0.9em}{0.5em}
+
+\captionsetup{font={small,bf},labelsep=quad}
+\setlist[enumerate]{itemsep=0.35em,topsep=0.35em,leftmargin=2em}
+\setlist[itemize]{itemsep=0.3em,topsep=0.3em,leftmargin=2em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 实验三\quad 交通灯控制实验}
+\fancyhead[R]{\small 微机原理与接口技术}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{25pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{softline}\leaders\hrule height \headrulewidth\hfill}}
+
+\lstdefinelanguage{A51}{
+  morekeywords={ORG,LJMP,JMP,SJMP,START,MAIN,LOOP,MOV,SETB,ACALL,DJNZ,PUSH,POP,RET,RETI,END,DELAY,INT0_ISR,IT0,EX0,EA,SP,P1,P3,R5,R6,R7,ACC},
+  sensitive=false,
+  morecomment=[l]{;}
+}
+
+\lstdefinestyle{a51style}{
+  language=A51,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{codekw}\bfseries,
+  commentstyle=\color{codecmt}\itshape,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=8pt,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  framerule=0.4pt,
+  rulecolor=\color{softline},
+  showstringspaces=false,
+  breaklines=true,
+  tabsize=4
+}
+
+\newcommand{\CourseName}{微机原理与接口技术}
+\newcommand{\CollegeName}{自动化学院}
+\newcommand{\MajorName}{自动化(新工科试验班)}
+\newcommand{\StudentID}{24061428}
+\newcommand{\StudentName}{张跃哲}
+\newcommand{\TeacherName}{金朝阳}
+\newcommand{\FinishDate}{2026年4月27日}
+
+\begin{document}
+
+\begin{titlepage}
+  \thispagestyle{empty}
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,inner sep=0pt] at ([xshift=-1.4cm,yshift=-1.2cm]current page.north east) {\includegraphics[width=2.5cm]{images/hdu_motto.jpg}};
+  \end{tikzpicture}
+
+  \centering
+  \vspace*{0.8cm}
+  \includegraphics[width=4.6cm]{images/hdu_logo.pdf}\par
+
+  \vspace{1.1cm}
+  {\zihao{4}\bfseries 杭州电子科技大学\par}
+
+  \vspace{1.1cm}
+  {\zihao{-1}\bfseries 实验三\quad 交通灯控制实验\par}
+
+  \vspace{2.4cm}
+  \renewcommand{\arraystretch}{1.8}
+  \begin{tabular}{>{\raggedleft\arraybackslash}p{3.2cm}p{8.2cm}}
+    课\quad 程 & \CourseName \\
+    学\quad 院 & \CollegeName \\
+    专\quad 业 & \MajorName \\
+    学\quad 号 & \StudentID \\
+    学生姓名 & \StudentName \\
+    指导教师 & \TeacherName \\
+    完成日期 & \FinishDate \\
+  \end{tabular}
+
+  \vfill
+\end{titlepage}
+
+\pagenumbering{Roman}
+\tableofcontents
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{sections/experiment3}
+
+\end{document}
