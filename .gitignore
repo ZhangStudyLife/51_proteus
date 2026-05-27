@@ -25,3 +25,4 @@
 **/*.vrb
 **/*.run.xml
 **/*.tmp
+.spec-workflow
