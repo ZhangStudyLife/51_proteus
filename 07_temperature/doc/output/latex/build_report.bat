@@ -6,8 +6,8 @@ xelatex -interaction=nonstopmode -halt-on-error -output-directory=build main.tex
 if errorlevel 1 goto :err
 xelatex -interaction=nonstopmode -halt-on-error -output-directory=build main.tex
 if errorlevel 1 goto :err
-copy /Y build\main.pdf ..\Experiment4_Report.pdf >nul
-echo Build success. PDF: ..\Experiment4_Report.pdf
+copy /Y build\main.pdf ..\Experiment7_Report.pdf >nul
+echo Build success. PDF: ..\Experiment7_Report.pdf
 exit /b 0
 :err
 echo Build failed. See build\main.log

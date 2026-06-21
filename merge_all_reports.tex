@@ -1,0 +1,26 @@
+\documentclass[12pt,a4paper]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\pagestyle{empty}
+
+\definecolor{themecolor}{HTML}{1F5C99}
+
+\begin{document}
+
+\includepdf[pages=-]{01_single_led/doc/output/Experiment1_Report.pdf}
+\includepdf[pages=-]{02_flow_led/doc/output/Experiment2_Report.pdf}
+\includepdf[pages=-]{03_traffic_light/doc/output/Experiment3_Report.pdf}
+\includepdf[pages=-]{04_lcd/doc/output/Experiment4_Report.pdf}
+\includepdf[pages=-]{05_waveform_generator/doc/output/Experiment5_Report.pdf}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[align=center,text=themecolor,font=\Huge\bfseries] at (current page.center)
+    {实验六\\[1.2em]空白};
+\end{tikzpicture}
+\clearpage
+
+\includepdf[pages=-]{07_temperature/doc/output/Experiment7_Report.pdf}
+
+\end{document}

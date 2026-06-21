@@ -26,3 +26,13 @@
 **/*.run.xml
 **/*.tmp
 .spec-workflow
+
+# Root merge build output
+/build_all/
+
+# Proteus per-user workspace files
+**/*.workspace
+
+# Rendered preview images and duplicated build PDFs
+**/doc/output/latex/build/preview/
+**/doc/output/latex/build/*.pdf
